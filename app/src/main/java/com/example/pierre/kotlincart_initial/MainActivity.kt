@@ -12,6 +12,7 @@ import android.widget.*
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        //ETAPE 1
         val articles = arrayOf(Article(3, "Harry Potter", Type.Livre), Article(4, "Lucky luke", Type.Livre), Article(10, "Star Wars", Type.Dvd),
                 Article(6,"Le seigneur des anneaux", Type.Dvd),
                 Article(7,"Pulp Fiction", Type.Dvd),
@@ -21,13 +22,13 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         ///ETAPE 2
-       val lv = findViewById(R.id.listView) as ListView
+       /*val lv = findViewById(R.id.listView) as ListView
         val adapter = BasicAdapter(this,articles)
-        lv.adapter = adapter
+        lv.adapter = adapter*/
 
         //ETAPE 3
         //Extension function
-        fun Article.appliquerReduction(s: Int){
+        /*fun Article.appliquerReduction(s: Int){
             this.prix-= s;
         }
 
@@ -36,25 +37,22 @@ class MainActivity : AppCompatActivity() {
         button.setOnClickListener( {
             for (article in articles){
                 when (article.prix) {
-                    in 5..10 -> article.appliquerReduction(5)
+                    in 5..50 -> article.appliquerReduction(5)
                 }
             }
             adapter.notifyDataSetChanged()
-        })
+        })*/
 
 
         //ETAPE 4
-        lv.onItemClickListener = AdapterView.OnItemClickListener{ parent, view, i, l ->
+        /*lv.onItemClickListener = AdapterView.OnItemClickListener{ parent, view, i, l ->
             val intent = Intent(this, ProfilActivity::class.java)
             intent.putExtra("prix", articles.get(i).prix)
             intent.putExtra("name", articles.get(i).name)
             intent.putExtra("type", articles.get(i).type.toString())
             startActivity(intent)
-        }
-
-
+        }*/
     }
-
 
     private class BasicAdapter(val myContext: Context, val articles: Array<Article>) : BaseAdapter() {
 

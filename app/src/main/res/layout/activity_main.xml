@@ -9,11 +9,11 @@
     android:weightSum="1">
 
     <!--ETAPE3-->
-    <Button
+    <!--<Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Reduction"
-        android:id="@+id/btnfilter"/>
+        android:id="@+id/btnfilter"/>-->
 
     <ListView
         android:id="@+id/listView"

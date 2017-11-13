@@ -12,7 +12,7 @@ class ProfilActivity : AppCompatActivity() {
         setContentView(R.layout.activity_profil)
 
         //ETAPE 4
-        val nameTextView = findViewById(R.id.profil_nom) as TextView
+        /*val nameTextView = findViewById(R.id.profil_nom) as TextView
         val prixTextView = findViewById(R.id.profil_prix) as TextView
         val imageView = findViewById(R.id.imageView) as ImageView
 
@@ -20,29 +20,34 @@ class ProfilActivity : AppCompatActivity() {
         val prix = intent.getIntExtra("prix", 0).toString()
         val name = intent.getStringExtra("name")
         val type = intent.getStringExtra("type")
+        prixTextView.text = "${prix} €"*/
 
-        prixTextView.text = "${prix} €"
+
+        //ETAPE 5
+        /*imageView.setImageResource(getImageOfType(Type.valueOf(type)))*/
+
+        //ETAPE 6
+        /*
         nameTextView.text = getNameBySmartCast(name)
+        */
 
-
-        imageView.setImageResource(getImageOfType(Type.valueOf(type)))
     }
 
     //ETAPE 5
-    fun getImageOfType(type: Type): Int{
+    /*fun getImageOfType(type: Type): Int{
         when (type){
             Type.Livre -> return R.drawable.livres
             Type.Dvd -> return R.drawable.dvd_img
         }
-    }
+    }*/
 
     //ETAPE 6
-    fun getNameBySmartCast(name: Any): String{
+    /*fun getNameBySmartCast(name: Any): String{
         if(name is String){
             return name
         }
         return "nothing"
-    }
+    }*/
 
 
 }
